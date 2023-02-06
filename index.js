@@ -1,11 +1,15 @@
-function pluralizeOrEmpty(value, string) {
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
 
-  if(value === 0) return "";
-  if(value === 1) return `${value} ${string}`;
+readline.question("Insert the time in seconds: ", seconds => {
+  const formatedString = formatDuration(seconds);
+    
+  console.log(formatedString);
   
-  return `${value} ${string}s`
-}
-
+  readline.close();
+})
 
 function formatDuration (seconds) {
   if(seconds == 0) return "now";
@@ -28,4 +32,11 @@ function formatDuration (seconds) {
   const space4 = (minutes != 0 && seconds != 0 || (hours != 0 && seconds != 0))?" and ":"";
     
   return `${StrYears}${space1}${StrDays}${space2}${StrHours}${space3}${StrMinutes}${space4}${StrSeconds}`
+}
+
+function pluralizeOrEmpty(value, string) {
+  if(value === 0) return "";
+  if(value === 1) return `${value} ${string}`;
+  
+  return `${value} ${string}s`
 }
