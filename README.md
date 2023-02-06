@@ -29,7 +29,7 @@ function pluralizeOrEmpty(value, string){
 
 pluralizeOrEmpty(1, 'day');
 
-// It Will return the message: "1 days"
+// It Will return the message: "1 day"
 
 ```
 
