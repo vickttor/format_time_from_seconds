@@ -33,9 +33,9 @@ pluralizeOrEmpty(1, 'day');
 
 ```
 
-But if the value is higher than 1 we only add the 's' letter at the end of the string to pluralize the message
+But if the value is greater than 1 we just add the letter 's' at the end of the string to pluralize the message.
 
-Now we need to concat all these values together using a conjunction `and`. But we need to use the `and` just before the last value if there'are more than one.
+Now we need to concatenate all these values using a conjunction. But we need to use the `and` conjunction right before the last value if there is more than one.
 
 The constants `space1`, `space2` and so on, will persist the string containing "and" or an empty string ("").
 With this implementation we can validate if we need to put the "and" conjunction between the `years` and `days` or between `days` and `hours` etc...
